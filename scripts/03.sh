@@ -1,9 +1,8 @@
 #!/bin/bash
-password=salut
-echo "Entrez votre login svp"
-read login
-echo "Votre login est $login"
-echo "Entrez le mot de passe pour acceder a l'outil"
-read password
-
-#pgrep -u $USER | while read PID; do sudo kill $PID; done
+echo "Que souhaitez vous traduire ?"
+read texte
+echo "Quelle est la langue de votre texte ? (format = en/fr/de...)"
+read ori
+echo "Dans quelle langue traduire ? (format = en/fr/de...)"
+read dest
+xdg-open "https://translate.google.com/?hl=fr&tab=TT#view=home&op=translate&sl=$ori&tl=$dest&text=$texte"
